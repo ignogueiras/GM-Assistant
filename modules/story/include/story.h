@@ -13,8 +13,9 @@ private:
 
 public:
     Story(const std::string& title);
-    void addNode(const StoryNode& node);
-    void display() const;
+    void addEvent(const StoryNode& node);
+    void addEvent(const std::string& event_title);
+    std::string getSynopsis() const;
 };
 
 #endif // GM_ASSISTANT_STORY_HPP

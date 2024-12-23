@@ -3,23 +3,18 @@
 #include "location.h"
 
 int main() {
-    Story myStory("The Lost Artifact");
+    // Crear una nueva historia
+    Story myStory("The Quest for the Lost Artifact");
+    myStory.addEvent("The hero receives a mysterious letter.");
+    myStory.addEvent("The journey begins through treacherous lands.");
+    myStory.addEvent("An ancient secret is uncovered.");
 
-    myStory.addNode(StoryNode("The hero discovers an ancient map."));
-    myStory.addNode(StoryNode("A rival appears, claiming the artifact as their own."));
-    myStory.addNode(StoryNode("A fierce battle takes place in the cursed forest."));
+    // Crear un personaje
+    Character hero("Arlen the Brave", 32, "Protagonist");
 
-    Character hero{"Ariana", "Héroe", "Una valiente guerrera que busca redención."};
-    Location forest{"Bosque Oscuro", "Un lugar lleno de sombras y secretos."};
-
-    std::cout << "Historia:\n";
-    myStory.display();
-
-    std::cout << "\nPersonaje:\n";
-    hero.describe();
-
-    std::cout << "\nLugar:\n";
-    forest.describe();
+    // Mostrar resultados
+    std::cout << "Story Synopsis:\n" << myStory.getSynopsis() << std::endl;
+    std::cout << "Main Character:\n" << hero.getDescription() << std::endl;
 
     return 0;
 }
