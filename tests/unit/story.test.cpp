@@ -1,5 +1,6 @@
-#include <gtest/gtest.h>
 #include "story.h"
+
+#include <gtest/gtest.h>
 
 // Test: Creación básica de una historia
 TEST(StoryTest, BasicCreation) {
@@ -14,6 +15,7 @@ TEST(StoryTest, AddEvents) {
     story.addEvent("A map is discovered.");
     story.addEvent("An adventure begins.");
 
-    EXPECT_EQ(story.getSynopsis(), 
-        "Story: The Lost Relic\nEvents:\n- A map is discovered.\n\n- An adventure begins.\n\n");
+    EXPECT_EQ(story.getSynopsis(),
+              "Story: The Lost Relic\nEvents:\n- A map is discovered.\n\n- An "
+              "adventure begins.\n\n");
 }
