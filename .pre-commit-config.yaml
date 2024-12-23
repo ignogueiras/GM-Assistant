@@ -11,6 +11,6 @@ repos:
     rev: master
     hooks:
       - id: clang-format
-        args: [--style=Google]
+        args: ["--style={BasedOnStyle: google,IndentWidth: 4}", -i]
       - id: clang-tidy
         args: [-p=build]

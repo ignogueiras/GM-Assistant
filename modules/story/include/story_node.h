@@ -5,14 +5,14 @@
 #include <vector>
 
 struct StoryNode {
-    private:
-        std::string _title;
-        std::string _content;
-        std::vector<std::string> _choices;
+   private:
+    std::string _title;
+    std::string _content;
+    std::vector<std::string> _choices;
 
-    public:
-        StoryNode(const std::string& title);
-        std::string getSynopsis() const;
+   public:
+    explicit StoryNode(const std::string& title);
+    std::string getSynopsis() const;
 };
 
-#endif // GM_ASSISTANT_STORY_NODE_HPP
+#endif  // GM_ASSISTANT_STORY_NODE_HPP
