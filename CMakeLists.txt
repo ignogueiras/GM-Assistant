@@ -10,6 +10,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(modules)
 add_subdirectory(tests)
+enable_testing()
 
 add_executable(gm_assitant src/main.cpp)
 

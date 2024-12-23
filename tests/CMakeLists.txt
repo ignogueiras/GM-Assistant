@@ -6,7 +6,7 @@ FetchContent_Declare(googletest URL https://github.com/google/googletest/archive
 FetchContent_MakeAvailable(googletest)
 
 # Habilitar testing en el proyecto
-enable_testing()
+
 
 # Añadir tests
 add_executable(tests
@@ -14,3 +14,7 @@ add_executable(tests
     unit/character.test.cpp
 )
 target_link_libraries(tests PRIVATE gtest gtest_main story characters)
+
+# Register tests with CTest
+include(GoogleTest)
+gtest_discover_tests(tests)
