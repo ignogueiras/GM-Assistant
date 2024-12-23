@@ -2,11 +2,9 @@
 
 Story::Story(const std::string& title) : _title(title) {}
 
-void Story::addEvent(const StoryNode& node) {
-    _nodes.push_back(node);
-}
+void Story::addEvent(const StoryNode& node) { _nodes.push_back(node); }
 
-void Story::addEvent(const std::string& event_title){
+void Story::addEvent(const std::string& event_title) {
     addEvent(StoryNode(event_title));
 }
 

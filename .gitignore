@@ -1,5 +1,6 @@
 # build folders
 build/
+Testing/
 
 # IDE config
 .vscode/

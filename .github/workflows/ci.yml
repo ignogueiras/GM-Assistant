@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Set up C++ environment
+      uses:  aminya/setup-cpp@v1
+      with:
+        compiler: g++-13
+        cmake: true
+        ninja: true
+
+    - name: Configure with CMake
+      run: |
+        mkdir build
+        cd build
+        cmake .. -DCMAKE_BUILD_TYPE=Debug
+
+    - name: Build with CMake
+      run: |
+        cd build
+        make
+
+    - name: Run Tests
+      run: |
+        cd build
+        ctest --output-on-failure

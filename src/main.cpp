@@ -1,6 +1,6 @@
-#include "story.h"
 #include "character.h"
 #include "location.h"
+#include "story.h"
 
 int main() {
     // Crear una nueva historia

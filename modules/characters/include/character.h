@@ -5,15 +5,15 @@
 #include <string>
 
 struct Character {
-    private:
-        std::string _name;
-        std::string _role;
-        std::string _description;
-        int _age;
+   private:
+    std::string _name;
+    std::string _role;
+    std::string _description;
+    int _age;
 
-    public:
-        Character(const std::string& name, int age, const std::string& role);
-        std::string getDescription() const;
+   public:
+    Character(const std::string& name, int age, const std::string& role);
+    std::string getDescription() const;
 };
 
-#endif // GM_ASSISTANT_CHARACTER_HPP
+#endif  // GM_ASSISTANT_CHARACTER_HPP
