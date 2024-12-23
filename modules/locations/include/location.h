@@ -11,4 +11,4 @@ struct Location {
     void describe() const;
 };
 
-#endif // GM_ASSISTANT_LOCATION_HPP
+#endif  // GM_ASSISTANT_LOCATION_HPP
