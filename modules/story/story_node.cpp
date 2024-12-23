@@ -2,10 +2,11 @@
 
 StoryNode::StoryNode(const std::string& title) : _title(title) {};
 
-void StoryNode::display() const {
-    std::cout << "Scene: " << _title << std::endl;
-    std::cout << _content << std::endl;
+std::string StoryNode::getSynopsis() const {
+    std::string synopsis = "Scene: " + _title + '\n';
+    synopsis += _content + '\n';
     for (size_t i = 0; i < _choices.size(); ++i) {
-        std::cout << i + 1 << ". " << _choices[i] << std::endl;
+       synopsis += std::to_string(i + 1) + ". " + _choices[i] + '\n';
     }
+    return synopsis;
 }

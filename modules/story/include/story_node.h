@@ -1,7 +1,6 @@
 #ifndef GM_ASSISTANT_STORY_NODE_HPP
 #define GM_ASSISTANT_STORY_NODE_HPP
 
-#include <iostream>
 #include <string>
 #include <vector>
 
@@ -13,7 +12,7 @@ struct StoryNode {
 
     public:
         StoryNode(const std::string& title);
-        void display() const;
+        std::string getSynopsis() const;
 };
 
 #endif // GM_ASSISTANT_STORY_NODE_HPP
